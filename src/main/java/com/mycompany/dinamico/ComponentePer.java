@@ -52,16 +52,16 @@ public class ComponentePer {
 
         frame.setVisible(true); //Para que la ventana sea visible para el usuario.
     }
-//*************************************************************************************************************
+    
     //Método para crear la pestaña de formulario con validación y envío
     private JPanel crearFormularioPanel() {
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
 
         JLabel label = new JLabel("Ingrese su nombre:");
-        JTextField campoTexto = new JTextField(15);
-        JButton btnEnviar = new JButton("Enviar");
-        JButton btnSiguiente = new JButton("Siguiente");
+        JTextField campoTexto = new JTextField(15); //Es cuanto va a tener de ancho el JTextField
+        JButton btnEnviar = new JButton("Enviar"); //Es ponerle nombre al boton
+        JButton btnSiguiente = new JButton("Siguiente"); //Es ponerle nombre al boton
 
         //Acción para validar y enviar los datos del JTextField.
         btnEnviar.addActionListener(e -> {
@@ -102,8 +102,8 @@ public class ComponentePer {
         JButton btnActualizar = new JButton("Actualizar Datos");
 
         //Simulación de exportación
-        btnExportarPDF.addActionListener(e -> JOptionPane.showMessageDialog(panel, "Reporte exportado a PDF."));
-        btnExportarExcel.addActionListener(e -> JOptionPane.showMessageDialog(panel, "Reporte exportado a Excel."));
+        btnExportarPDF.addActionListener(e -> JOptionPane.showMessageDialog(panel, "Reporte exportado a PDF.")); //Es la accion que se va a hacer cuando se preciona el boton 
+        btnExportarExcel.addActionListener(e -> JOptionPane.showMessageDialog(panel, "Reporte exportado a Excel.")); //Es la accion que se va a hacer cuando se preciona el boton
 
         //Acción para actualizar datos (simulación)
         btnActualizar.addActionListener(e -> JOptionPane.showMessageDialog(panel, "Datos actualizados."));
